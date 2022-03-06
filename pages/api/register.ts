@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import Cors from "cors";
-import { Fido2Lib } from "@dannymoerkerke/fido2-lib";
 import crypto from "crypto";
 import base64url from "base64url";
 import { sessionOptions } from "../../lib/session";
@@ -9,6 +8,7 @@ import absoluteUrl from "next-absolute-url";
 
 import initMiddleware from "../../lib/init-middleware";
 import { l, ll } from "../../lib/log";
+import { fido } from "../../lib/fido";
 
 // Initialize the cors middleware
 const cors = initMiddleware(
@@ -18,19 +18,6 @@ const cors = initMiddleware(
     methods: ["GET", "POST", "OPTIONS"],
   })
 );
-
-const fido = new Fido2Lib({
-  timeout: 60000,
-  rpId: "localhost",
-  rpName: "What PWA Can Do Today",
-  rpIcon: "https://whatpwacando.today/src/img/icons/icon-512x512.png",
-  challengeSize: 128,
-  attestation: "none",
-  cryptoParams: [-7, -257],
-  authenticatorAttachment: "platform",
-  authenticatorRequireResidentKey: false,
-  authenticatorUserVerification: "required",
-});
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   await cors(req, res);
