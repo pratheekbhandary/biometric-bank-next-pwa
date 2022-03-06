@@ -9,6 +9,7 @@ function App() {
 
   React.useEffect(() => {
     // register a uuid on load and setState
+    setUuid(uuidv4());
     const id = setInterval(() => {
       setUuid(uuidv4());
     }, 30 * 1000);
