@@ -20,7 +20,7 @@ const cors = initMiddleware(
 
 const fido = new Fido2Lib({
   timeout: 60000,
-  rpId: "localhost",
+  rpId: "biometric-bank-next-pwa.vercel.app",
   rpName: "What PWA Can Do Today",
   rpIcon: "https://whatpwacando.today/src/img/icons/icon-512x512.png",
   challengeSize: 128,
