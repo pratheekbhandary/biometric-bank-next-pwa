@@ -14,7 +14,9 @@ const QR = () => {
   return (
     <div>
       <QrReader
-        constraints={{}}
+        constraints={{
+          facingMode: "environment",
+        }}
         scanDelay={300}
         onResult={(result, error) => {
           if (!!result) {
