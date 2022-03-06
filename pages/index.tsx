@@ -173,9 +173,31 @@ const WithStaticProps = () => {
 
   return (
     <Layout title="Prathvi Bank">
-      <button onClick={register}>Register</button>
-      <button onClick={authenticate}>Authenticate</button>
-      <button onClick={removeCredential}>Delete</button>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          padding: "2rem",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <button style={{ margin: "2rem", padding: "2rem" }} onClick={register}>
+          Register
+        </button>
+        <button
+          style={{ margin: "2rem", padding: "2rem" }}
+          onClick={authenticate}
+        >
+          Authenticate
+        </button>
+        <button
+          style={{ margin: "2rem", padding: "2rem" }}
+          onClick={removeCredential}
+        >
+          Delete
+        </button>
+      </div>
       {msg && <h1 style={{ marginBottom: "400px" }}>{msg}</h1>}
     </Layout>
   );
