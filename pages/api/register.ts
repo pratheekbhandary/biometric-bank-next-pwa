@@ -52,7 +52,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   ll("origin", origin);
   const attestationExpectations = {
     challenge,
-    origin: "https://localhost:3000",
+    origin,
     factor: "either",
   };
 

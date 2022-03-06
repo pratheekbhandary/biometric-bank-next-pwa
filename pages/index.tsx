@@ -11,7 +11,7 @@ type Props = {
   items: User[];
 };
 
-const apiUrl = "https://localhost:3000/api";
+const apiUrl = "/api";
 
 const bufferToBase64 = (buffer) =>
   btoa(String.fromCharCode(...new Uint8Array(buffer)));

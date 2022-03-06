@@ -50,7 +50,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const assertionExpectations = {
       challenge,
-      origin: "https://localhost:3000",
+      origin,
       factor: "either",
       publicKey,
       prevCounter,
