@@ -11,7 +11,7 @@ function App() {
     // register a uuid on load and setState
     const id = setInterval(() => {
       setUuid(uuidv4());
-    }, 2000);
+    }, 30 * 1000);
     return () => {
       clearInterval(id);
     };
