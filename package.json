@@ -8,14 +8,21 @@
   },
   "dependencies": {
     "@dannymoerkerke/fido2-lib": "^2.4.1",
+    "@emotion/react": "^11.8.1",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.4.4",
+    "@mui/material": "^5.4.4",
     "base64url": "^3.0.1",
     "cors": "^2.8.5",
     "iron-session": "^6.0.5",
     "next": "latest",
     "next-absolute-url": "^1.2.2",
     "next-pwa": "^5.4.5",
+    "next-qrcode": "^2.0.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
