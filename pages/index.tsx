@@ -176,7 +176,7 @@ const WithStaticProps = () => {
       <button onClick={register}>Register</button>
       <button onClick={authenticate}>Authenticate</button>
       <button onClick={removeCredential}>Delete</button>
-      {msg && <div>{msg}</div>}
+      {msg && <h1 style={{ marginBottom: "400px" }}>{msg}</h1>}
     </Layout>
   );
 };
